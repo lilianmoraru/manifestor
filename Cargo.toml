@@ -1,0 +1,21 @@
+[package]
+name = "manifestor"
+version = "0.1.0"
+authors = ["Lilian A. Moraru <lilian.moraru90@gmail.com>"]
+
+[dependencies]
+clap = "2.6"
+error-chain = "0.11.0-rc.2"
+
+[dependencies.cursive]
+version = "0.6"
+default-features = false
+features = ["termion-backend"]
+
+[profile.release]
+debug = false
+rpath = false
+lto   = true
+panic = 'abort'
+codegen-units    = 1
+debug-assertions = false
